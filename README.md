@@ -1,7 +1,7 @@
-# 군복무 단축 계산기
-하루라도 빠른 전역을 꿈꾸는 이들을 위해...
+# 변리사 자격증 신청일 계산기
+수습기간 제외일때문에 헷갈리는 자격증 신청일, 그것을 알려드림
 
-https://terrykwon.com/goondanchook
+(https://blog.naver.com/guessist25)
 
 ## Dependencies
 * [moment.js](https://momentjs.com/) `v2.20.1`
