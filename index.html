@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <title>군복무 단축 계산기</title>
-    <meta name="description" content="군복무 단축안으로 인한 날짜별 단축일수와 새로운 전역일 계산기">
+    <title>변리사 자격증 신청일 계산기</title>
+    <meta name="description" content="수습 기간을 이상하게 제외해서 헷갈리는 자격증 신청일, 그것을 알려드림">
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,27 +25,27 @@
     <div class="card">
 
         <header>
-            <h1>군복무 단축 계산기</h1>
-            <p>여러분 축하드립니다. <a href="https://www.mma.go.kr/board/boardView.do?mc=usr0000379&gesipan_id=2&gsgeul_no=1499320">군 복무가 드디어 단축되었습니다.</a></p>
+            <h1>변리사 자격증 신청일 계산기</h1>
+            <p>여러분 축하드립니다. <a href="https://www.mma.go.kr/board/boardView.do?mc=usr0000379&gesipan_id=2&gsgeul_no=1499320">변리사 자격증을 신청할 수 있습니다.</a></p>
         </header>
 
         <div class="horizontal-divider"></div>
 
         <form class="form" onsubmit="return calculate()">
             <div class="field">
-                <label>군별선택</label>
+                <label>기수선택</label>
 
                 <select class="select_service_type">
-                    <option value="army">육군</option>
-                    <option value="navy">해군</option>
-                    <option value="airforce">공군</option>
-                    <option value="social_service">사회복무요원</option>
+                    <option value="58th">58기</option>
+                    <option value="59th">59기</option>
+                    <option value="60th">60기</option>
+                    <option value="61th">61기</option>
                 </select>
             </div>
 
             <div class="field">
-                <label>입대일</label>
-                <input type="text" id ="join_date" name="join_date" placeholder="예) 170131">
+                <label>입사일</label>
+                <input type="text" id ="join_date" name="join_date" placeholder="예) 220214">
             </div>
 
             <button id="submit" class="ui button" type="submit">계산!</button>
@@ -62,8 +62,8 @@
 
 <footer class="footer">
     <div class="container__footer">
-        <h5 class="copyright">2018 &copy <a href="https://terrykwon.com">Terry Kwon.</a>
-            <a href="https://github.com/terrykwon/goondanchook"><u>Source code on GitHub.</u></a></h5>
+        <h5 class="copyright">2022 &copy <a href="https://blog.naver.com/guessist25">BlacP.</a>
+            <a href="https://github.com/Guessist/Guessist.github.io"><u>Source code on GitHub.</u></a></h5>
     </div>
 </footer>
 
