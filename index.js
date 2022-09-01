@@ -44,6 +44,7 @@ function calculate() {
     let cnt = 1;
     let appCnt = 1;
     while (appCnt < 180) {
+        alert(joinDate);
         cntDate = jointDate.add(cnt, "days").format('YYMMDD');
         alert(cntDate);
         if(cntDate.isBefore("220124")) appCnt++;
