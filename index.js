@@ -6,11 +6,11 @@ const _MS_PER_DAY = 1000 * 60 * 60 * 24;
 function changeDeltaText(delta) {
     let resStr;
 
-    if (delta <= 0) {
-        resStr = "아쉽지만 군복무가 단축되지 않았습니다.";
-    } else {
-        resStr = "축하합니다! 군복무가 <span class='accented'>" + delta + "일</span> 단축되었습니다.";
-    }
+   // if (delta <= 0) {
+  //      resStr = "아쉽지만 군복무가 단축되지 않았습니다.";
+   // } else {
+  //      resStr = "축하합니다! 군복무가 <span class='accented'>" + delta + "일</span> 단축되었습니다.";
+  //  }
 
     $('.results--delta').empty().append(resStr);
 }
@@ -46,6 +46,7 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
+    alert(joinDate
 
     $('.results').hide().fadeIn(1200).show();
 
