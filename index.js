@@ -1,11 +1,13 @@
 // var moment = require('moment');
 moment().format();
 
+const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+
 function changeDeltaText(delta) {
     let resStr;
 
     if (delta <= 0) {
-        resStr = "아쉽지만 자격증  단축되지 않았습니다.";
+        resStr = "아쉽지만 군복무가 단축되지 않았습니다.";
     } else {
         resStr = "축하합니다! 군복무가 <span class='accented'>" + delta + "일</span> 단축되었습니다.";
     }
@@ -29,16 +31,14 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
-   // if (joinDate.isBefore("211110")) {
-   //     alert('합격일 이전은 불인정돼요!');
-   //     return;
-   // }
-    
+
     $('.results').hide().fadeIn(1200).show();
-    
-    alert(joinDate);
-        
-    let referenceDate; // Date when policy first applied
+
+    let referenceDate = moment("170103", 'YYMMDD'); // Date when policy goes in effect
+
+    let reducedDays = Math.floor(
+        moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
+
     let prevEndDate;
 
     let serviceType = $('.select_service_type').val();
@@ -46,27 +46,11 @@ function calculate() {
     prevEndDate = moment(joinDate);
     if (serviceType === 'airforce') {
         prevEndDate.year(prevEndDate.year() + 2);
-        referenceDate = moment("161003", 'YYMMDD');
-
     } else if (serviceType === 'navy') {
+        prevEndDate = moment(joinDate);
         prevEndDate.month(prevEndDate.month() + 23);
-        referenceDate = moment("161103", 'YYMMDD');
-
-    } else if (serviceType === 'social_service') {
-        prevEndDate.year(prevEndDate.year() + 2);
-        referenceDate = moment("161003", 'YYMMDD');
-
     } else {
         prevEndDate.month(prevEndDate.month() + 21);
-        referenceDate = moment("170103", 'YYMMDD');
-    }
-
-    let reducedDays = Math.floor(
-        moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
-
-    // Cap at 90 days
-    if (reducedDays.valueOf() > 90) {
-        reducedDays = 90;
     }
 
     prevEndDate.subtract(1, 'd');
@@ -81,3 +65,10 @@ function calculate() {
 
     return false;
 }
+
+
+$(document).ready(function() {
+
+    // $("#submit").click(calculate());
+
+}); 
