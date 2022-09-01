@@ -26,14 +26,14 @@ function changeEndDateText(endDate) {
 
 function calculate() {
     let joinDateString = $('#join_date').val();
-    let taljuDateString = $('#talju_date').val();
-    let rejoinDateString = $('#rejoin_date').val();
+   // let taljuDateString = $('#talju_date').val();
+   // let rejoinDateString = $('#rejoin_date').val();
     let joinDate = moment(joinDateString, 'YYMMDD');
-    let taljuDate = moment(taljuDateString, 'YYMMDD');
-    let rejoinDate = moment(rejoinDateString, 'YYMMDD');
+    //let taljuDate = moment(taljuDateString, 'YYMMDD');
+   // let rejoinDate = moment(rejoinDateString, 'YYMMDD');
     alert(moment(joinDate))
-    alert(moment(taljuDate))
-    alert(moment(rejoinDate))
+  //  alert(moment(taljuDate))
+  //  alert(moment(rejoinDate))
     if (!joinDate.isValid()) {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
