@@ -43,6 +43,7 @@ function calculate() {
        // prevEndDate.year(prevEndDate.year() + 2);
        // referenceDate = moment("161003", 'YYMMDD');
         alert(joinDate);
+        alert('테스트');
 
     } else if (serviceType === 'navy') {
         prevEndDate.month(prevEndDate.month() + 23);
