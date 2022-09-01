@@ -46,8 +46,8 @@ function calculate() {
     while (appCnt < 180) {
         cntDate = jointDate.add(cnt, "days").format('YYMMDD')
         if(cntDate.isBefore("220124")) appCnt++;
-        if(cntDate.isAfter("220401") && cntDate.isBefore("220704")) appCnt++
-        if(cntDate.isAfter("220729") appCnt++;        
+        if(cntDate.isAfter("220401")) && cntDate.isBefore("220704")) appCnt++
+        if(cntDate.isAfter("220729")) appCnt++;        
         cnt++;        
     }
     let cerfiticateDate = jointDate.add(cnt, "days").format('YYMMDD');
