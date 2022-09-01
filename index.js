@@ -31,9 +31,9 @@ function calculate() {
     let joinDate = moment(joinDateString, 'YYMMDD');
     let taljuDate = moment(taljuDateString, 'YYMMDD');
     let rejoinDate = moment(rejoinDateString, 'YYMMDD');
-    alert(joinDate)
-    alert(taljuDate)
-    alert(rejoinDate)
+    alert(moment(joinDate))
+    alert(moment(taljuDate))
+    alert(moment(rejoinDate))
     if (!joinDate.isValid()) {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
@@ -41,8 +41,10 @@ function calculate() {
 
     $('.results').hide().fadeIn(1200).show();
 
-    let referenceDate = moment("170103", 'YYMMDD'); // Date when policy goes in effect
+   // let referenceDate = moment("170103", 'YYMMDD'); // Date when policy goes in effect
 
+    
+    
     let reducedDays = Math.floor(
         moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
 
@@ -57,15 +59,6 @@ function calculate() {
     
     prevEndDate = moment(joinDate).format('YYYY-MM-DD');
     
-    if (serviceType === 'airforce') {
-        prevEndDate.year(prevEndDate.year() + 2);
-    } else if (serviceType === 'navy') {
-        prevEndDate = moment(joinDate);
-        prevEndDate.month(prevEndDate.month() + 23);
-    } else {
-        prevEndDate.month(prevEndDate.month() + 21);
-    }
-
     prevEndDate.subtract(1, 'd');
 
     changeDeltaText(reducedDays);
