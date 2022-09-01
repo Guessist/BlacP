@@ -31,7 +31,7 @@ function calculate() {
     let joinDate = moment(joinDateString, 'YYMMDD');
     let taljuDate = moment(taljuDateString, 'YYMMDD');
     let rejoinDate = moment(rejoinDateString, 'YYMMDD');
-    alert(joiniDate)
+    alert(joinDate)
     alert(taljuDate)
     alert(rejoinDate)
     if (!joinDate.isValid()) {
