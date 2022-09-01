@@ -43,9 +43,7 @@ function calculate() {
     let appCnt = 1;
     //if(jointDate.isSameOrAfter("220124") && jointDate.isSameOrBefore("220401")) appCnt = 0;
    // if(jointDate.isSameOrAfter("220704") && jointDate.isSameOrBefore("220729")) appCnt = 0;
-    alert("test")
-    alert("String(appCnt)")
-
+    
 
     //prevEndDate = moment(joinDate);
     if (serviceType === '58th') {
@@ -53,11 +51,15 @@ function calculate() {
        // referenceDate = moment("161003", 'YYMMDD');
        // alert(joinDate);
         //alert('테스트');
+        alert("test")
+        alert("String(appCnt)")
+
         
 
     } else if (serviceType === 'navy') {
         //prevEndDate.month(prevEndDate.month() + 23);
        // referenceDate = moment("161103", 'YYMMDD');
+        
 
     } else if (serviceType === 'social_service') {
         //prevEndDate.year(prevEndDate.year() + 2);
