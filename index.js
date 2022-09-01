@@ -49,6 +49,7 @@ function calculate() {
     
     
     prevEndDate = moment(joinDate);
+    alert(prevEndDate);
     if (serviceType === 'airforce') {
         prevEndDate.year(prevEndDate.year() + 2);
     } else if (serviceType === 'navy') {
