@@ -5,7 +5,7 @@ function changeDeltaText(delta) {
     let resStr;
 
     if (delta <= 0) {
-        resStr = "아쉽지만 군복무가 단축되지 않았습니다.";
+        resStr = "아쉽지만 자격증  단축되지 않았습니다.";
     } else {
         resStr = "축하합니다! 군복무가 <span class='accented'>" + delta + "일</span> 단축되었습니다.";
     }
