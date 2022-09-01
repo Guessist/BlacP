@@ -24,23 +24,20 @@ function changeEndDateText(endDate) {
     $('.results--date').empty().append(dateStr);
 }
 
-function calculate() {
+//function calculate() {
    // let joinDateString = $('#join_date').val();
    // let taljuDateString = $('#talju_date').val();
    // let rejoinDateString = $('#rejoin_date').val();
-   / let joinDate = moment(joinDateString, 'YYMMDD');
+   // let joinDate = moment(joinDateString, 'YYMMDD');
     //let taljuDate = moment(taljuDateString, 'YYMMDD');
    // let rejoinDate = moment(rejoinDateString, 'YYMMDD');
    
   //  alert(moment(taljuDate))
   //  alert(moment(rejoinDate))
-    let dateStr = "전역일은 <span class='accented'>" + endDate.year() + "년 "
-        + (endDate.month() + 1) + "월 "
-        + endDate.date() + "일</span> "
-        + "입니다.";
+  
 
-    $('.results--date').empty().append(dateStr);
-}
+  //  $('.results--date').empty().append(dateStr);
+//}
 
 function calculate() {
     let joinDateString = $('#join_date').val();
