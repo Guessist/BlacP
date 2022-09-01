@@ -38,7 +38,7 @@ function calculate() {
     let cnt = 1;
     while (cnt < 3) {
      cnt++;
-        alert(cnt);
+        alert(String(cnt));
     }
     let referenceDate; // Date when policy first applied
     let prevEndDate;
