@@ -46,7 +46,7 @@ function calculate() {
     alert("test")
     while (appCnt < 180) {      
         cntDate = jointDate.add(cnt, "days").format('YYMMDD');
-        alert(cntDate);
+        //alert(cntDate);
         if(cntDate.isBefore("220124")) appCnt++;
         if(cntDate.isAfter("220401")) && cntDate.isBefore("220704")) appCnt++;
         if(cntDate.isAfter("220729")) appCnt++;        
@@ -60,8 +60,8 @@ function calculate() {
     if (serviceType === '58th') {
        // prevEndDate.year(prevEndDate.year() + 2);
        // referenceDate = moment("161003", 'YYMMDD');
-        alert(joinDate);
-        alert('테스트');
+       // alert(joinDate);
+        //alert('테스트');
         
 
     } else if (serviceType === 'navy') {
