@@ -24,7 +24,17 @@ function changeEndDateText(endDate) {
 
 function calculate() {
     let joinDateString = $('#join_date').val();
+    let taljuDateString = $('#talju_date').val();
+    let rejoinDateString = $('#rejoin_date').val();  
+    
     let joinDate = moment(joinDateString, 'YYMMDD');
+    let taljuDate = moment(taljuDateString, 'YYMMDD');
+    let rejoinDate = moment(rejoinDateString, 'YYMMDD');
+
+    alert(moment(joinDate))
+    alert(moment(taljuDate))
+    alert(moment(rejoinDate))
+    
     if (!joinDate.isValid()) {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
@@ -41,12 +51,13 @@ function calculate() {
     let cntDate;
     let cnt = 1;
     let appCnt = 1;
-    if(jointDate.isSameOrAfter("2022-01-24") && jointDate.isSameOrBefore("2022-04-01")) {
-        appCnt = 0;
-    }
+    
+   // if(jointDate.isSameOrAfter("2022-01-24") && jointDate.isSameOrBefore("2022-04-01")) {
+   //     appCnt = 0;
+    //}
     //if(jointDate.isSameOrAfter("2022-07-04") && jointDate.isSameOrBefore("2022-07-29")) appCnt = 0;
-    alert('test')
-    alert(String(appCnt))
+  //  alert('test')
+   // alert(String(appCnt))
 
     //prevEndDate = moment(joinDate);
     if (serviceType === '58th') {
