@@ -29,6 +29,7 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
+    alert(joinDate);
 
     $('.results').hide().fadeIn(1200).show();
 
