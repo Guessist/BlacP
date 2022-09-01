@@ -29,17 +29,14 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
-    if (joinDate.isBefore("211110")) {
-        alert('합격일 이전은 불인정돼요!');
-        return;
-    }
+   // if (joinDate.isBefore("211110")) {
+   //     alert('합격일 이전은 불인정돼요!');
+   //     return;
+   // }
     
     $('.results').hide().fadeIn(1200).show();
     
-    //while (cnt < 3) {
-     //cnt++;
-     //   alert(String(cnt));
-    //}
+    alert(joinDate);
     let cntDate;
     let cnt = 1;
     let appCnt = 1;
