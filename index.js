@@ -29,17 +29,30 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
-    if (!joinDate.isBefore("211110")) {
+    if (joinDate.isBefore("211110")) {
         alert('합격일 이전은 불인정돼요!');
         return;
     }
     
     $('.results').hide().fadeIn(1200).show();
+    
+    //while (cnt < 3) {
+     //cnt++;
+     //   alert(String(cnt));
+    //}
+    let cntDate;
     let cnt = 1;
-    while (cnt < 3) {
-     cnt++;
-        alert(String(cnt));
+    let appCnt = 1;
+    while (appCnt < 180) {
+        cntDate = jointDate.add(cnt, "days").format('YYMMDD')
+        if(cntDate.isBefore("220124")) appCnt++;
+        if(cntDate.isAfter("220401") && cntDate.isBefore("220704")) appCnt++
+        if(cntDate.isAfter("220729") appCnt++;        
+        cnt++;        
     }
+    let cerfiticateDate = jointDate.add(cnt, "days").format('YYMMDD');
+    alert(certificateDate)
+        
     let referenceDate; // Date when policy first applied
     let prevEndDate;
 
