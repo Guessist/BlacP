@@ -48,8 +48,9 @@ function calculate() {
     let appCnt = 1;
     
     
-    prevEndDate = moment(joinDate);
+    prevEndDate = moment(joinDate).format('YYYY-MM-DD');
     alert(prevEndDate);
+    alert(joinDate);
     if (serviceType === 'airforce') {
         prevEndDate.year(prevEndDate.year() + 2);
     } else if (serviceType === 'navy') {
