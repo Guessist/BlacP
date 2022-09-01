@@ -58,13 +58,12 @@ function calculate() {
        // referenceDate = moment("170103", 'YYMMDD');
     }
 
-    let reducedDays = Math.floor(
-        moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
+    //let reducedDays = Math.floor(moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
 
     // Cap at 90 days
-    if (reducedDays.valueOf() > 90) {
-        reducedDays = 90;
-    }
+   // if (reducedDays.valueOf() > 90) {
+   //     reducedDays = 90;
+    //}
 
     //prevEndDate.subtract(1, 'd');
 
