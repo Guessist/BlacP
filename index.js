@@ -44,17 +44,8 @@ function calculate() {
     if(jointDate.isSameOrAfter("220124") && jointDate.isSameOrBefore("220401")) appCnt = 0;
     if(jointDate.isSameOrAfter("220704") && jointDate.isSameOrBefore("220729")) appCnt = 0;
     alert("test")
-    while (appCnt < 180) {      
-        cntDate = jointDate.add(cnt, "days").format('YYMMDD');
-        //alert(cntDate);
-        if(cntDate.isBefore("220124")) appCnt++;
-        if(cntDate.isAfter("220401")) && cntDate.isBefore("220704")) appCnt++;
-        if(cntDate.isAfter("220729")) appCnt++;        
-        cnt++;        
-    }
-    alert("test")
-    let cerfiticateDate = jointDate.add(cnt, "days").format('YYMMDD');
-    alert(certificateDate);
+    alert("String(appCnt)")
+
 
     //prevEndDate = moment(joinDate);
     if (serviceType === '58th') {
