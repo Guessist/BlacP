@@ -1,8 +1,6 @@
 // var moment = require('moment');
 moment().format();
 
-const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-
 function changeDeltaText(delta) {
     let resStr;
 
@@ -24,21 +22,6 @@ function changeEndDateText(endDate) {
     $('.results--date').empty().append(dateStr);
 }
 
-//function calculate() {
-   // let joinDateString = $('#join_date').val();
-   // let taljuDateString = $('#talju_date').val();
-   // let rejoinDateString = $('#rejoin_date').val();
-   // let joinDate = moment(joinDateString, 'YYMMDD');
-    //let taljuDate = moment(taljuDateString, 'YYMMDD');
-   // let rejoinDate = moment(rejoinDateString, 'YYMMDD');
-   
-  //  alert(moment(taljuDate))
-  //  alert(moment(rejoinDate))
-  
-
-  //  $('.results--date').empty().append(dateStr);
-//}
-
 function calculate() {
     let joinDateString = $('#join_date').val();
     let joinDate = moment(joinDateString, 'YYMMDD');
@@ -46,7 +29,7 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
-    
+
     $('.results').hide().fadeIn(1200).show();
 
     let referenceDate; // Date when policy first applied
@@ -82,20 +65,13 @@ function calculate() {
 
     prevEndDate.subtract(1, 'd');
 
-    //changeDeltaText(reducedDays);
+   // changeDeltaText(reducedDays);
 
     if (reducedDays > 0) {
-       // changeEndDateText(prevEndDate.subtract(reducedDays, 'd'));
+        //changeEndDateText(prevEndDate.subtract(reducedDays, 'd'));
     } else {
-       // changeEndDateText(prevEndDate);
+      //  changeEndDateText(prevEndDate);
     }
 
     return false;
 }
-
-
-$(document).ready(function() {
-
-    // $("#submit").click(calculate());
-
-}); 
