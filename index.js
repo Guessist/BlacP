@@ -51,7 +51,7 @@ function calculate() {
        // referenceDate = moment("161003", 'YYMMDD');
        // alert(joinDate);
         //alert('테스트');
-        alert("test")
+        alert('test')
        // alert("String(appCnt)")
 
         
