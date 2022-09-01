@@ -31,7 +31,7 @@ function calculate() {
     let joinDate = moment(joinDateString, 'YYMMDD');
     //let taljuDate = moment(taljuDateString, 'YYMMDD');
    // let rejoinDate = moment(rejoinDateString, 'YYMMDD');
-    alert(moment(joinDate))
+   
   //  alert(moment(taljuDate))
   //  alert(moment(rejoinDate))
     if (!joinDate.isValid()) {
@@ -51,6 +51,7 @@ function calculate() {
     let prevEndDate;
 
     let serviceType = $('.select_service_type').val();
+    alert(moment(joinDate))
 
     let cntDate;
     let cnt = 1;
