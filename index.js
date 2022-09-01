@@ -25,15 +25,26 @@ function changeEndDateText(endDate) {
 }
 
 function calculate() {
-    let joinDateString = $('#join_date').val();
+   // let joinDateString = $('#join_date').val();
    // let taljuDateString = $('#talju_date').val();
    // let rejoinDateString = $('#rejoin_date').val();
-    let joinDate = moment(joinDateString, 'YYMMDD');
+   / let joinDate = moment(joinDateString, 'YYMMDD');
     //let taljuDate = moment(taljuDateString, 'YYMMDD');
    // let rejoinDate = moment(rejoinDateString, 'YYMMDD');
    
   //  alert(moment(taljuDate))
   //  alert(moment(rejoinDate))
+    let dateStr = "전역일은 <span class='accented'>" + endDate.year() + "년 "
+        + (endDate.month() + 1) + "월 "
+        + endDate.date() + "일</span> "
+        + "입니다.";
+
+    $('.results--date').empty().append(dateStr);
+}
+
+function calculate() {
+    let joinDateString = $('#join_date').val();
+    let joinDate = moment(joinDateString, 'YYMMDD');
     if (!joinDate.isValid()) {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
@@ -41,25 +52,37 @@ function calculate() {
 
     $('.results').hide().fadeIn(1200).show();
 
-   // let referenceDate = moment("170103", 'YYMMDD'); // Date when policy goes in effect
-
-    
-    
-    let reducedDays = Math.floor(
-        moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
-
+    let referenceDate; // Date when policy first applied
     let prevEndDate;
 
     let serviceType = $('.select_service_type').val();
-    alert(moment(joinDate))
 
-    let cntDate;
-    let cnt = 1;
-    let appCnt = 1;
-    
-    
-    prevEndDate = moment(joinDate).format('YYYY-MM-DD');
-    
+    prevEndDate = moment(joinDate);
+    if (serviceType === 'airforce') {
+        prevEndDate.year(prevEndDate.year() + 2);
+        referenceDate = moment("161003", 'YYMMDD');
+
+    } else if (serviceType === 'navy') {
+        prevEndDate.month(prevEndDate.month() + 23);
+        referenceDate = moment("161103", 'YYMMDD');
+
+    } else if (serviceType === 'social_service') {
+        prevEndDate.year(prevEndDate.year() + 2);
+        referenceDate = moment("161003", 'YYMMDD');
+
+    } else {
+        prevEndDate.month(prevEndDate.month() + 21);
+        referenceDate = moment("170103", 'YYMMDD');
+    }
+
+    let reducedDays = Math.floor(
+        moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
+
+    // Cap at 90 days
+    if (reducedDays.valueOf() > 90) {
+        reducedDays = 90;
+    }
+
     prevEndDate.subtract(1, 'd');
 
     changeDeltaText(reducedDays);
