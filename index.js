@@ -16,12 +16,12 @@ function changeDeltaText(delta) {
 }
 
 function changeEndDateText(endDate) {
-    let dateStr = "전역일은 <span class='accented'>" + endDate.year() + "년 "
-        + (endDate.month() + 1) + "월 "
-        + endDate.date() + "일</span> "
-        + "입니다.";
+   // let dateStr = "전역일은 <span class='accented'>" + endDate.year() + "년 "
+  //      + (endDate.month() + 1) + "월 "
+  //      + endDate.date() + "일</span> "
+  //      + "입니다.";
 
-    $('.results--date').empty().append(dateStr);
+  //  $('.results--date').empty().append(dateStr);
 }
 
 //function calculate() {
@@ -46,7 +46,7 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
-    alert(joinDate
+    alert(joinDate)
 
     $('.results').hide().fadeIn(1200).show();
 
