@@ -46,7 +46,6 @@ function calculate() {
     let cntDate;
     let cnt = 1;
     let appCnt = 1;
-    alert(joinDate);
     
     
     prevEndDate = moment(joinDate);
