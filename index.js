@@ -41,9 +41,10 @@ function calculate() {
     let cntDate;
     let cnt = 1;
     let appCnt = 1;
-    //if(jointDate.isSameOrAfter("220124") && jointDate.isSameOrBefore("220401")) appCnt = 0;
-   // if(jointDate.isSameOrAfter("220704") && jointDate.isSameOrBefore("220729")) appCnt = 0;
+    if(jointDate.isSameOrAfter("220124") && jointDate.isSameOrBefore("220401")) appCnt = 0;
+    if(jointDate.isSameOrAfter("220704") && jointDate.isSameOrBefore("220729")) appCnt = 0;
     alert('test')
+    alert(String(appCnt))
 
     //prevEndDate = moment(joinDate);
     if (serviceType === '58th') {
@@ -51,8 +52,8 @@ function calculate() {
        // referenceDate = moment("161003", 'YYMMDD');
        // alert(joinDate);
         //alert('테스트');
-        alert('test')
-        alert(String(appCnt))
+       // alert('test')
+       // alert(String(appCnt))
 
         
 
