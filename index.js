@@ -29,19 +29,20 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
-    alert(joinDate);
+    
 
     $('.results').hide().fadeIn(1200).show();
 
-    let referenceDate; // Date when policy first applied
-    let prevEndDate;
+    //let referenceDate; // Date when policy first applied
+    //let prevEndDate;
 
     let serviceType = $('.select_service_type').val();
 
-    prevEndDate = moment(joinDate);
-    if (serviceType === 'airforce') {
-        prevEndDate.year(prevEndDate.year() + 2);
-        referenceDate = moment("161003", 'YYMMDD');
+    //prevEndDate = moment(joinDate);
+    if (serviceType === '58th') {
+       // prevEndDate.year(prevEndDate.year() + 2);
+       // referenceDate = moment("161003", 'YYMMDD');
+        alert(joinDate);
 
     } else if (serviceType === 'navy') {
         prevEndDate.month(prevEndDate.month() + 23);
