@@ -43,6 +43,7 @@ function calculate() {
     let cntDate;
     let cnt = 1;
     let appCnt = 1;
+    alert(joinDate);
     while (appCnt < 180) {
         alert(joinDate);
         cntDate = jointDate.add(cnt, "days").format('YYMMDD');
