@@ -52,7 +52,7 @@ function calculate() {
        // alert(joinDate);
         //alert('테스트');
         alert('test')
-       // alert("String(appCnt)")
+        alert(String(appCnt))
 
         
 
