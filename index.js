@@ -21,7 +21,7 @@ function changeEndDateText(endDate) {
         + endDate.date() + "일</span> "
         + "입니다.";
 
-  //  $('.results--date').empty().append(dateStr);
+    $('.results--date').empty().append(dateStr);
 }
 
 //function calculate() {
