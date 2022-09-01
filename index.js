@@ -43,7 +43,7 @@ function calculate() {
     let appCnt = 1;
     //if(jointDate.isSameOrAfter("220124") && jointDate.isSameOrBefore("220401")) appCnt = 0;
    // if(jointDate.isSameOrAfter("220704") && jointDate.isSameOrBefore("220729")) appCnt = 0;
-    
+    alert('test')
 
     //prevEndDate = moment(joinDate);
     if (serviceType === '58th') {
