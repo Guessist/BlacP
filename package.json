@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terrykwon/goondanchook.git"
+    "url": "git+https://github.com/Guessist/BlacP.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/terrykwon/goondanchook/issues"
+    "url": "https://github.com/Guessist/BlacP/issues"
   },
-  "homepage": "https://github.com/terrykwon/goondanchook#readme"
+  "homepage": "https://github.com/Guessist/BlacP#readme"
 }
