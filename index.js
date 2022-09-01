@@ -43,6 +43,22 @@ function calculate() {
 
     let serviceType = $('.select_service_type').val();
 
+        let cntDate;
+    let cnt = 1;
+    let appCnt = 1;
+    alert(joinDate);
+    while (appCnt < 180) {
+        alert(joinDate);
+        cntDate = jointDate.add(cnt, "days").format('YYMMDD');
+        alert(cntDate);
+        if(cntDate.isBefore("220124")) appCnt++;
+        if(cntDate.isAfter("220401")) && cntDate.isBefore("220704")) appCnt++;
+        if(cntDate.isAfter("220729")) appCnt++;        
+        cnt++;        
+    }
+    let cerfiticateDate = jointDate.add(cnt, "days").format('YYMMDD');
+    alert(certificateDate);
+    
     prevEndDate = moment(joinDate);
     if (serviceType === 'airforce') {
         prevEndDate.year(prevEndDate.year() + 2);
