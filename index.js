@@ -26,7 +26,14 @@ function changeEndDateText(endDate) {
 
 function calculate() {
     let joinDateString = $('#join_date').val();
+    let taljuDateString = $('#talju_date').val();
+    let rejoinDateString = $('#rejoin_date').val();
     let joinDate = moment(joinDateString, 'YYMMDD');
+    let taljuDate = moment(taljuDateString, 'YYMMDD');
+    let rejoinDate = moment(rejoinDateString, 'YYMMDD');
+    alert(joiniDate)
+    alert(taljuDate)
+    alert(rejoinDate)
     if (!joinDate.isValid()) {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
@@ -49,8 +56,7 @@ function calculate() {
     
     
     prevEndDate = moment(joinDate).format('YYYY-MM-DD');
-    alert(prevEndDate);
-    alert(joinDate);
+    
     if (serviceType === 'airforce') {
         prevEndDate.year(prevEndDate.year() + 2);
     } else if (serviceType === 'navy') {
