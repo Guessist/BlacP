@@ -47,15 +47,15 @@ function calculate() {
 
     } else if (serviceType === 'navy') {
         //prevEndDate.month(prevEndDate.month() + 23);
-        referenceDate = moment("161103", 'YYMMDD');
+       // referenceDate = moment("161103", 'YYMMDD');
 
     } else if (serviceType === 'social_service') {
         //prevEndDate.year(prevEndDate.year() + 2);
-        referenceDate = moment("161003", 'YYMMDD');
+       // referenceDate = moment("161003", 'YYMMDD');
 
     } else {
         //prevEndDate.month(prevEndDate.month() + 21);
-        referenceDate = moment("170103", 'YYMMDD');
+       // referenceDate = moment("170103", 'YYMMDD');
     }
 
     let reducedDays = Math.floor(
