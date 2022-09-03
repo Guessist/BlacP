@@ -106,9 +106,7 @@ function calculate() {
 
     let serviceType = $('.select_service_type').val();
 
-    let cntDate;
-    let cnt = 1;
-    let appCnt = 1;
+  
 //
 //    alert('12');
 //    alert(joinDate);
@@ -132,18 +130,9 @@ function calculate() {
        // alert('test')
        // alert(String(appCnt))
     }
-    else if (serviceType === 'navy') {
+    else if (serviceType === '59th') {
         //prevEndDate.month(prevEndDate.month() + 23);
        // referenceDate = moment("161103", 'YYMMDD');
-    }
-    else if (serviceType === 'social_service') {
-        //prevEndDate.year(prevEndDate.year() + 2);
-       // referenceDate = moment("161003", 'YYMMDD');
-
-    }
-    else {
-        //prevEndDate.month(prevEndDate.month() + 21);
-       // referenceDate = moment("170103", 'YYMMDD');
     }
 
     //let reducedDays = Math.floor(moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
@@ -157,11 +146,11 @@ function calculate() {
 
    // changeDeltaText(reducedDays);
 
-    if (reducedDays > 0) {
-        //changeEndDateText(prevEndDate.subtract(reducedDays, 'd'));
-    } else {
-      //  changeEndDateText(prevEndDate);
-    }
+//     if (reducedDays > 0) {
+//         changeEndDateText(prevEndDate.subtract(reducedDays, 'd'));
+//     } else {
+//         changeEndDateText(prevEndDate);
+//     }
 
     return false;
 }
