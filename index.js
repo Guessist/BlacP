@@ -21,7 +21,7 @@ function resultDate(endDate) {
     let dateStr = "자격증 신청 가능일은 <span class='accented'>" + endDate.year() + "년 "
         + (endDate.month()+1) + "월 "
         + endDate.date() + "일</span> "
-        + "입니다.";
+        + "입니다!";
     $('.results--date').empty().append(dateStr);
 }
 
