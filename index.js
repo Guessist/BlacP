@@ -65,39 +65,39 @@ function calculate() {
     }
     else { // TODO 탈주일 포함된경우
         alert(' TODO 탈주일 포함된경우')
-//         let cnt1 = 1;
-//         let appCnt1 = 1;
+        let cnt1 = 1;
+        let appCnt1 = 1;
 
-//         let joinDate_;
-//         let taljuDate_;
-//         let rejoindate_;
-//         joinDate_= moment(joinDate).format();
-//         taljuDate_= moment(taljuDate).format('YYMMDD');
-//         rejoindate_= moment(rejoinDate).format('YYMMDD');
-//         while (appCnt1 < 180) {
-//             let cntDate;
-//             cntDate = moment(joinDate_).add(cnt1, "days").format('YYMMDD');
-// //            alert(cntDate);
-//             if(moment(cntDate).isBefore('220124')) {
-//                 if(moment(cntDate).isAfter(moment(taljuDate_)) && moment(cntDate).isBefore(moment(rejoindate_))) {}
-//                 else appCnt1++;
-//             }
-//             if(moment(cntDate).isAfter('220401') && moment(cntDate).isBefore('220704')) {
-//                 if(moment(cntDate).isAfter(moment(taljuDate_)) && moment(cntDate).isBefore(moment(rejoindate_))) {}
-//                 else appCnt1++;
-//             }
-//             if(moment(cntDate).isAfter('220729')) {
-//                 if(moment(cntDate).isAfter(moment(taljuDate_)) && moment(cntDate).isBefore(moment(rejoindate_))) {}
-//                 else appCnt1++;
-//             }
-//             cnt1++;
-//         }
-//         alert('결과')
-//         alert(String(cnt1))
-//         let certificateDate;
-//         let joinDate2 = moment(joinDate).format()
-//         certificateDate = moment(joinDate2).add(cnt1, "days").format('YYMMDD');
-//         alert(certificateDate);
+        let joinDate_;
+        let taljuDate_;
+        let rejoindate_;
+        joinDate_= moment(joinDate).format();
+        taljuDate_= moment(taljuDate).format('YYMMDD');
+        rejoindate_= moment(rejoinDate).format('YYMMDD');
+        while (appCnt1 < 180) {
+            let cntDate;
+            cntDate = moment(joinDate_).add(cnt1, "days").format('YYMMDD');
+//            alert(cntDate);
+            if(moment(cntDate).isBefore('220124')) {
+                if(moment(cntDate).isAfter(moment(taljuDate_)) && moment(cntDate).isBefore(moment(rejoindate_))) {}
+                else appCnt1++;
+            }
+            if(moment(cntDate).isAfter('220401') && moment(cntDate).isBefore('220704')) {
+                if(moment(cntDate).isAfter(moment(taljuDate_)) && moment(cntDate).isBefore(moment(rejoindate_))) {}
+                else appCnt1++;
+            }
+            if(moment(cntDate).isAfter('220729')) {
+                if(moment(cntDate).isAfter(moment(taljuDate_)) && moment(cntDate).isBefore(moment(rejoindate_))) {}
+                else appCnt1++;
+            }
+            cnt1++;
+        }
+        alert('결과')
+        alert(String(cnt1))
+        let certificateDate;
+        let joinDate2 = moment(joinDate).format()
+        certificateDate = moment(joinDate2).add(cnt1, "days").format('YYMMDD');
+        alert(certificateDate);
 
 
     }
