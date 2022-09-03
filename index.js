@@ -39,7 +39,7 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
-    alert('6개월 연수 = 180일로 계산한 것으로 참고로만 봐주세요!')
+    alert('6개월 실무 연수 = 180일로 계산한 것으로 참고로만 봐주세요!')
     if (!taljuDate.isValid() || !rejoinDate.isValid() ) {
 
         let cnt = 1;
