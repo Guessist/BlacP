@@ -1,23 +1,27 @@
 moment().format();
 
-function changeDeltaText(delta) {
+function lestDay(lest) {
     let resStr;
 
-    if (delta <= 0) {
-        resStr = "아쉽지만 군복무가 단축되지 않았습니다.";
-    } else {
-        resStr = "축하합니다! 군복무가 <span class='accented'>" + delta + "일</span> 단축되었습니다.";
+    if (lest > 0) {
+        resStr = "아쉽지만 자격증 신청하려면 <span class='accented'>" + lest + "일</span>을 더 기다려야해요.";
+    }
+    else {
+        resStr = "축하합니다! 자격증 신청이 가능해요! 고생하셨습니다!";
     }
 
     $('.results--delta').empty().append(resStr);
 }
 
-function changeEndDateText(endDate) {
-    let dateStr = "전역일은 <span class='accented'>" + endDate.year() + "년 "
-        + (endDate.month() + 1) + "월 "
+function resultDate(endDate) {
+//    let dateStr = "자격증 신청 가능일은 <span class='accented'>" + endDate.year() + "년 "
+//        + (endDate.month() + 1) + "월 "
+//        + endDate.date() + "일</span> "
+//        + "입니다.";
+    let dateStr = "자격증 신청 가능일은 <span class='accented'>" + endDate.year() + "년 "
+        + (endDate.month()+1) + "월 "
         + endDate.date() + "일</span> "
         + "입니다.";
-
     $('.results--date').empty().append(dateStr);
 }
 
@@ -35,10 +39,11 @@ function calculate() {
         alert('날짜를 올바르게 입력하여 주세요 (예. 170101)');
         return;
     }
+    alert('6개월 연수 = 180일로 계산한 것으로 참고로만 봐주세요!')
     if (!taljuDate.isValid() || !rejoinDate.isValid() ) {
 
         let cnt = 1;
-        let appCnt = 1;
+        let appCnt = 2;
 
         let joinDate_;
         joinDate_= moment(joinDate).format();
@@ -52,21 +57,35 @@ function calculate() {
             cnt++;
 
         }
-        alert('결과')
+       //alert('결과')
         //alert(String(appCnt))
         //alert(String(cnt))
         let certificateDate;
         let joinDate2 = moment(joinDate).format()
-        certificateDate = moment(joinDate2).add(cnt, "days").format('YYMMDD');
-        alert('신청가능일은');
-        alert(certificateDate);
-        alert('입니다');
+        certificateDate = moment(joinDate2).add(cnt, "days");//.format('YYMMDD');
+        //alert('신청가능일은');
+        //alert(certificateDate);
+        //alert('입니다');
+        let today;
+        today = moment();
+        //alert(today);
+        let lest; //= Math.floor(moment.duration(moment(certificateDate).diff(moment(today))).asDays());
+        lest = moment(certificateDate).diff(today,"days");
+        //alert(String(lest));
+        lestDay(lest);
+
+        if (lest > 0) {
+            resultDate(certificateDate);
+        } else {
+            resultDate(certificateDate);
+        }
+
 
     }
     else { // TODO 탈주일 포함된경우
-        alert(' TODO 탈주일 포함된경우')
+        //alert(' TODO 탈주일 포함된경우')
         let cnt1 = 1;
-        let appCnt1 = 1;
+        let appCnt1 = 2;
 
         let joinDate_;
         let taljuDate_;
@@ -92,21 +111,32 @@ function calculate() {
             }
             cnt1++;
         }
-        alert('결과')
-        alert(String(cnt1))
+       // alert('결과')
+        //alert(String(cnt1))
         let certificateDate;
         let joinDate2 = moment(joinDate).format()
-        certificateDate = moment(joinDate2).add(cnt1, "days").format('YYMMDD');
-        alert(certificateDate);
+        certificateDate = moment(joinDate2).add(cnt1, "days");//.format('YYMMDD');
+        //alert(certificateDate);
+        //alert('결과1')
 
-
+        let today;
+        today = moment();
+        //alert(today);
+        let lest; //= Math.floor(moment.duration(moment(certificateDate).diff(moment(today))).asDays());
+        lest = moment(certificateDate).diff(today,"days");
+        //alert(String(lest));
+        lestDay(lest);
+        if (lest > 0) {
+            resultDate(certificateDate);
+        } else {
+            resultDate(certificateDate);
+        }
     }
 
     $('.results').hide().fadeIn(1200).show();
 
     let serviceType = $('.select_service_type').val();
 
-  
 //
 //    alert('12');
 //    alert(joinDate);
@@ -134,23 +164,11 @@ function calculate() {
         //prevEndDate.month(prevEndDate.month() + 23);
        // referenceDate = moment("161103", 'YYMMDD');
     }
+    else {
 
-    //let reducedDays = Math.floor(moment.duration(joinDate.diff(referenceDate)).asDays() / 14 + 1);
+    }
 
-    // Cap at 90 days
-   // if (reducedDays.valueOf() > 90) {
-   //     reducedDays = 90;
-    //}
 
-    //prevEndDate.subtract(1, 'd');
-
-   // changeDeltaText(reducedDays);
-
-//     if (reducedDays > 0) {
-//         changeEndDateText(prevEndDate.subtract(reducedDays, 'd'));
-//     } else {
-//         changeEndDateText(prevEndDate);
-//     }
 
     return false;
 }
