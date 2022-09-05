@@ -47,7 +47,7 @@ function calculate() {
 
         let joinDate_;
         joinDate_= moment(joinDate).format();
-        while (appCnt < 180) {
+        while (appCnt < 185) {
             let cntDate;
             cntDate = moment(joinDate_).add(cnt, "days").format('YYMMDD');
 //            alert(cntDate);
@@ -93,7 +93,7 @@ function calculate() {
         joinDate_= moment(joinDate).format();
         taljuDate_= moment(taljuDate).format('YYMMDD');
         rejoindate_= moment(rejoinDate).format('YYMMDD');
-        while (appCnt1 < 180) {
+        while (appCnt1 < 185) {
             let cntDate;
             cntDate = moment(joinDate_).add(cnt1, "days").format('YYMMDD');
 //            alert(cntDate);
